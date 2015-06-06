@@ -1,5 +1,5 @@
 # made-with-open-data-api
 
-## Dev
+### Dev
 
-`bundle exec puma -C config/puma.rb`
+```foreman start```

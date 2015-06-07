@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
   has_many :project_categories, inverse_of: :category
-  has_many :projects, through: :project_categorys
+  has_many :projects, through: :project_categories
 
   validates :name, presence: true, uniqueness: true
 

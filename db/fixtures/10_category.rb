@@ -1,0 +1,11 @@
+Category.seed(:id,
+              { id: 1, name: 'Other' },
+              { id: 2, name: 'Health and Social Services' },
+              { id: 3, name: 'Environment, Energy, and Climate' },
+              { id: 4, name: 'Safety and Crime' },
+              { id: 5, name: 'Culture and Recreation' },
+              { id: 6, name: 'Finance' },
+              { id: 7, name: 'Transportation and Infrastructure' },
+              { id: 8, name: 'Housing and Urban Planning' },
+              { id: 9, name: 'Economy, Business, and Community' },
+             )

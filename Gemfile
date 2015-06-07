@@ -11,6 +11,7 @@ gem 'rails', '4.2.1'
 gem 'devise', '~> 3.5.1'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'paper_trail', '~> 3.0.8'
+gem 'seed-fu', '~> 2.3.5'
 
 # Use postgresql as the database for Active Record
 gem 'pg'

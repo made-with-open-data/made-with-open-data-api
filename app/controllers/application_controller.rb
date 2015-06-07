@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def user_for_paper_trail
-    current_user.try(:id) || 'Unknown user'
+    current_user.try(:id)
   end
 end

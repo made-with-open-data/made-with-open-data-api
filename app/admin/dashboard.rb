@@ -17,7 +17,12 @@ ActiveAdmin.register_page "Dashboard" do
         column ("Type") { |v| v.item_type.underscore.humanize }
         column ("Modified at") { |v| v.created_at.to_s :long }
         column ("Admin") do |v|
-          link_to User.find(v.whodunnit).email, [:admin, User.find(v.whodunnit)]
+          if v.whodunnit
+            link_to User.find(v.whodunnit).email,
+                    [:admin, User.find(v.whodunnit)]
+          else
+            'Unknown Admin'
+          end
         end
       end
     end

@@ -3,6 +3,7 @@ ruby '2.2.2'
 
 
 # Monitoring
+gem 'awesome_print', '~> 1.6.1'
 gem 'newrelic_rpm'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

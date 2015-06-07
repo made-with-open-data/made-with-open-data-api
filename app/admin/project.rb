@@ -15,6 +15,17 @@ ActiveAdmin.register Project do
   permit_params :title, :published, :url, :image_url, :description,
                 type_ids: [], category_ids: []
 
+  index do
+    column :title
+    column :url do |project|
+      link_to project.url, project.url, target: '_blank'
+    end
+    column :published
+    column :created_at
+
+    actions
+  end
+
   form do |f|
     f.semantic_errors *f.object.errors.keys
 

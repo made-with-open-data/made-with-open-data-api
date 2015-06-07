@@ -12,16 +12,17 @@ ActiveAdmin.register Project do
   #   permitted
   # end
 
-  permit_params :title, :url, :description,
-                type_ids: [],
-                category_ids: []
+  permit_params :title, :published, :url, :image_url, :description,
+                type_ids: [], category_ids: []
 
   form do |f|
     f.semantic_errors *f.object.errors.keys
 
     f.inputs 'Project' do
+      f.input :published
       f.input :title
       f.input :url
+      f.input :image_url
       f.input :description
       f.input :types, as: :check_boxes
       f.input :categories, as: :check_boxes

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  root to: redirect('https://www.madewithopendata.org')
+
   resources :projects, only: :index
 
   # The priority is based upon order of creation: first created -> highest priority.

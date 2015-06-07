@@ -13,6 +13,20 @@ ActiveAdmin.register Project do
   # end
 
   permit_params :title, :url, :description,
-                project_types: [:project_id, :type_id],
-                project_categories: [:project_id, :category_id]
+                type_ids: [],
+                category_ids: []
+
+  form do |f|
+    f.semantic_errors *f.object.errors.keys
+
+    f.inputs 'Project' do
+      f.input :title
+      f.input :url
+      f.input :description
+      f.input :types, as: :check_boxes
+      f.input :categories, as: :check_boxes
+    end
+
+    f.actions
+  end
 end
